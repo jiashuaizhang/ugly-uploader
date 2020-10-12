@@ -60,7 +60,7 @@
                 },
                 ruleValidate: {
                     destDir: [
-                        { required: false, pattern: '^[c-zC-Z]:(\\\\[^\\\\/:*?"<>|]+)*\\\\?$',message: '上传路径格式错误', trigger: 'blur' },
+                        { required: false/*, pattern: '^[c-zC-Z]:(\\\\[^\\\\/:*?"<>|]+)*\\\\?$'*/,message: '上传路径格式错误', trigger: 'blur' },
                     ]
                 },
                 loading : false,

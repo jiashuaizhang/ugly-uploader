@@ -21,6 +21,7 @@ import java.util.regex.Pattern;
 public class UploadController implements InitializingBean {
 
     public static final Pattern WINDOWS_DIR_PATTERN = Pattern.compile("^[c-zC-Z]:(\\\\[^\\\\/:*?\"<>|]+)*\\\\?$");
+    public static final Pattern UNIX_DIR_PATTERN = Pattern.compile("^/?(\\w+/?)+$");
     @Value("${upload.default-dest-dir}")
     private String defaultDestDir;
 
@@ -31,9 +32,17 @@ public class UploadController implements InitializingBean {
         Map<String, Object> result = new HashMap<>();
         if(StringUtils.isEmpty(destDir)) {
             destDir = defaultDestDir;
-        } else if(!WINDOWS_DIR_PATTERN.matcher(destDir).matches()) {
-            result.put("msg", "文件路径不规范");
-            return Mono.just(result);
+        } else {
+            boolean match;
+            if(System.getProperty("os.name").toLowerCase().startsWith("win")) {
+                match = WINDOWS_DIR_PATTERN.matcher(destDir).matches();
+            } else {
+                match = UNIX_DIR_PATTERN.matcher(destDir).matches();
+            }
+            if(!match) {
+                result.put("msg", "文件路径不规范");
+                return Mono.just(result);
+            }
         }
         String finalDestDir = destDir;
         fileParts.subscribe(filePart -> {

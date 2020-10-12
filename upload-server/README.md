@@ -2,7 +2,7 @@
 上传工具后台源码
 ## Complie
 ```bush
-maven run complie
+maven run compile
 ```
 ## Run
 ### Development
