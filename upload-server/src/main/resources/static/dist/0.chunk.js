@@ -96,10 +96,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -111,7 +107,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ruleValidate: {
                 destDir: [{ required: false, pattern: '^[c-zC-Z]:(\\\\[^\\\\/:*?"<>|]+)*\\\\?$', message: '上传路径格式错误', trigger: 'blur' }]
             },
-            loading: false
+            loading: false,
+            mainHeight: window.innerHeight - 50 + 'px'
         };
     },
 
@@ -221,9 +218,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "justify": "center"
     }
   }, [_c('Col', {
-    staticStyle: {
-      "height": "600px"
-    },
+    style: ({
+      'height': _vm.mainHeight
+    }),
     attrs: {
       "span": "20"
     }
@@ -235,23 +232,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('Card', {
     staticClass: "Card"
-  }, [_c('Spin', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (_vm.loading),
-      expression: "loading"
-    }],
-    attrs: {
-      "fix": ""
-    }
-  }, [_c('Icon', {
-    staticClass: "demo-spin-icon-load",
-    attrs: {
-      "type": "ios-loading",
-      "size": "18"
-    }
-  }), _vm._v(" "), _c('div', [_vm._v("上传中")])], 1), _vm._v(" "), _c('br'), _vm._v(" "), _c('h1', {
+  }, [_c('br'), _vm._v(" "), _c('h1', {
     staticStyle: {
       "text-align": "center",
       "font-size": "32px"

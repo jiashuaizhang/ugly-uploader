@@ -11,7 +11,7 @@
 
         <!-- 主体部分 -->
         <Row type="flex" justify="center">
-            <Col span="20" style="height:600px;">
+            <Col span="20" :style="{'height': mainHeight}">
                 <Layout>
                     <Content style="display:flex;justify-content:center;background:#eeeeee">
                         <Card class="Card">
@@ -63,7 +63,8 @@
                         { required: false, pattern: '^[c-zC-Z]:(\\\\[^\\\\/:*?"<>|]+)*\\\\?$',message: '上传路径格式错误', trigger: 'blur' },
                     ]
                 },
-                loading : false
+                loading : false,
+                mainHeight: (window.innerHeight - 50) + 'px'
             }
         },
         methods: {
