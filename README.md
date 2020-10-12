@@ -4,5 +4,5 @@
 写这个的原因是因为本人很穷，手机容量常常不够用，不得不备份到电脑。
 ## 个人建议
 配合[Virtual-Hosts](https://github.com/x-falcon/Virtual-Hosts/releases/tag/2.1.0
-),安卓手机也可以免root修改服务域名，强迫症用起来很舒服。
+),安卓手机可以免root修改服务域名，强迫症用起来很舒服。
 
