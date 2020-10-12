@@ -34,10 +34,10 @@
                                         </Upload>
                                     </Col>
                                 </Row>
-                                <Card dis-hover>
+                                <Card dis-hover style="margin-top: 18px">
                                     <div v-for="file in formValidate.files">{{ file.name }}</div>
                                 </Card>
-                                 <FormItem>
+                                 <FormItem style="margin-top: 20px">
                                     <Button type="primary" @click="handleSubmit('formValidate')">上传</Button>
                                     <Button @click="handleReset()" style="margin-left: 8px">重置</Button>
                                 </FormItem>
