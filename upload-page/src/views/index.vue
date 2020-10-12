@@ -15,10 +15,6 @@
                 <Layout>
                     <Content style="display:flex;justify-content:center;background:#eeeeee">
                         <Card class="Card">
-                            <Spin fix v-show="loading">
-                                <Icon type="ios-loading" size=18 class="demo-spin-icon-load"></Icon>
-                                <div>上传中</div>
-                            </Spin>
                             <br>
                             <h1 style="text-align: center;font-size:32px;">难看的上传页</h1>
                             <br>
