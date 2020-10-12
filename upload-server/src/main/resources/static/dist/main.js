@@ -939,7 +939,7 @@ util.title = function (title) {
 var routers = [{
     path: '/',
     meta: {
-        title: ''
+        title: '文件上传'
     },
     component: function component(resolve) {
         return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(43)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
@@ -971,7 +971,7 @@ var Component = __webpack_require__(19)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\代码\\个人工作区\\upload-page\\src\\app.vue"
+Component.options.__file = "E:\\代码\\个人工作区\\ugly-uploader\\upload-page\\src\\app.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] app.vue: functional components are not supported with templates, they should use render functions.")}
 

@@ -17,7 +17,7 @@ var Component = __webpack_require__(19)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\代码\\个人工作区\\upload-page\\src\\views\\index.vue"
+Component.options.__file = "E:\\代码\\个人工作区\\ugly-uploader\\upload-page\\src\\views\\index.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -165,8 +165,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         handleReset: function handleReset() {
             this.$refs['formValidate'].resetFields();
-            console.dir(this);
-            this.$els['files'].innerHTML = '';
+            this.formValidate.files = [];
         }
     }
 });
@@ -310,24 +309,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "icon": "ios-cloud-upload-outline"
     }
   }, [_vm._v("选择")])], 1)], 1)], 1), _vm._v(" "), _c('Card', {
-    directives: [{
-      name: "el",
-      rawName: "v-el",
-      value: (_vm.files),
-      expression: "files"
-    }],
     attrs: {
       "dis-hover": ""
     }
   }, _vm._l((_vm.formValidate.files), function(file) {
     return _c('div', [_vm._v(_vm._s(file.name))])
-  })), _vm._v(" "), _c('FormItem', [_c('Button', {
+  }), 0), _vm._v(" "), _c('FormItem', [_c('Button', {
     attrs: {
       "type": "primary"
     },
     on: {
       "click": function($event) {
-        _vm.handleSubmit('formValidate')
+        return _vm.handleSubmit('formValidate')
       }
     }
   }, [_vm._v("上传")]), _vm._v(" "), _c('Button', {
@@ -336,7 +329,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     on: {
       "click": function($event) {
-        _vm.handleReset()
+        return _vm.handleReset()
       }
     }
   }, [_vm._v("重置")])], 1)], 1)], 1)], 1)], 1)], 1)], 1)], 1)
